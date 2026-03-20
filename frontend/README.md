@@ -1,16 +1,51 @@
-# React + Vite
+# ⚔ DSA Quest – Gamified DSA Learning
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React frontend for the DSA Quest hackathon project. Dark fantasy theme, animated castle that builds as you solve problems.
 
-Currently, two official plugins are available:
+## Setup
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```bash
+npm install
+npm run dev
+```
 
-## React Compiler
+## File Structure
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```
+src/
+├── App.jsx                  # Main router (auth → connect → dashboard)
+├── main.jsx                 # Entry point
+├── styles/
+│   └── global.css           # CSS variables, animations, global styles
+├── data/
+│   └── mockData.js          # All hardcoded mock data (stats, roadmap, castle)
+├── pages/
+│   ├── AuthPage.jsx         # Sign up + Login with validation
+│   ├── ConnectPage.jsx      # Link LeetCode / Codeforces account
+│   └── DashboardPage.jsx    # Main dashboard with stats + roadmap
+└── components/
+    ├── CastleMap.jsx        # Animated SVG castle (builds with progress)
+    └── GoalModal.jsx        # 3-step goal setting modal
+```
 
-## Expanding the ESLint configuration
+## What's Wired
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- ✅ Signup: username (5-10 chars), email (pattern check), password + confirm with eye toggle
+- ✅ Login: username + password with eye toggle; proceeds even without backend
+- ✅ Axios calls to `/api/signup`, `/api/login`, `/api/connect-platform`, `/api/set-goal` 
+- ✅ Platform connect (LeetCode / Codeforces) with user ID input
+- ✅ Stats display: rank, total solved, category breakdown bars
+- ✅ 3-step goal modal: aim → problem count → days
+- ✅ Day-wise roadmap with toggle-solved checkboxes
+- ✅ Animated SVG castle that builds layer by layer as problems are solved
+- ✅ Achievements panel, XP bar, streak tracker
+
+## Backend Integration Points
+
+Replace mock data in `src/data/mockData.js` with real API responses.
+All axios calls are already in place — just remove the `.catch(() => {})` suppression.
+
+## Theme
+
+Dark fantasy — Cinzel Decorative titles, Rajdhani UI font, Orbitron monospace.  
+Gold (#f0a500) + Cyan (#00e5ff) + Purple (#9b4dff) accent palette.
