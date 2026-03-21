@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-export default function GoalModal({ onClose, onGoalSet }) {
+export default function GoalModal({ onClose, onGoalSet,handle ,rating}) {
   const [step, setStep] = useState(1); // 1: aim, 2: problems, 3: days
   const [aim, setAim] = useState(null);
   const [numProblems, setNumProblems] = useState(14);
   const [numDays, setNumDays] = useState(7);
   const [loading, setLoading] = useState(false);
-
+ 
   const handleAimSelect = (choice) => {
     setAim(choice);
     setTimeout(() => setStep(2), 250);
@@ -16,7 +16,7 @@ export default function GoalModal({ onClose, onGoalSet }) {
   const handleSubmit = async () => {
     setLoading(true);
     try {
-      await axios.post('/api/set-goal', { aim, numProblems, numDays }).catch(() => {});
+      await axios.post('http://localhost:5000/test3', { aim, numProblems, numDays ,handle,rating}).catch(() => {});
     } catch (_) {}
     await new Promise(r => setTimeout(r, 900));
     setLoading(false);

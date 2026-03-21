@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import CastleMap from '../components/CastleMap.jsx';
 import GoalModal from '../components/GoalModal.jsx';
 import { mockRoadmap } from '../data/mockData.js';
@@ -41,7 +41,7 @@ export default function DashboardPage({ user, platformData, goalData, onGoalSet 
   const [showGoalModal, setShowGoalModal] = useState(!goalData);
   const [roadmap, setRoadmap] = useState(mockRoadmap);
   const [activeDay, setActiveDay] = useState(0);
-
+  
   const stats = platformData?.stats;
   const isLC = platformData?.platform === 'leetcode';
 
@@ -60,11 +60,15 @@ export default function DashboardPage({ user, platformData, goalData, onGoalSet 
         }
       )
     );
+    console.log(platformData.stats.rating)
   };
-
+useEffect(() => {
+    console.log("Here")
+  },[]);
   const handleGoalSet = (data) => {
     onGoalSet(data);
     setShowGoalModal(false);
+    //console.log(platformData)
   };
 
   return (
@@ -105,7 +109,7 @@ export default function DashboardPage({ user, platformData, goalData, onGoalSet 
         {/* Achievements */}
         <div style={styles.achieveSection}>
           <div style={styles.achieveSectionTitle}>🏅 Achievements</div>
-          <div style={styles.achieveList}>
+          {/* <div style={styles.achieveList}>
             {[
               { icon: '⚔', title: 'First Blood', desc: 'Solved first problem', earned: totalSolved >= 1 },
               { icon: '🔥', title: 'On Fire', desc: '5-day streak', earned: true },
@@ -122,7 +126,7 @@ export default function DashboardPage({ user, platformData, goalData, onGoalSet 
                 {a.earned && <span style={styles.achieveCheck}>✓</span>}
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
 
@@ -310,7 +314,7 @@ export default function DashboardPage({ user, platformData, goalData, onGoalSet 
       </div>
 
       {showGoalModal && (
-        <GoalModal onClose={() => setShowGoalModal(false)} onGoalSet={handleGoalSet} />
+        <GoalModal onClose={() => setShowGoalModal(false)} onGoalSet={handleGoalSet} handle ={platformData.userId} rating={platformData.stats.rating} />
       )}
 
       <style>{`

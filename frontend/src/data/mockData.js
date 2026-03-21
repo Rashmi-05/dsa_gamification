@@ -35,61 +35,62 @@ export const mockCodeforcesStats = {
 export const mockRoadmap = [
   {
     day: 1,
-    theme: "Array Foundations",
+    theme: "Day 1",
     problems: [
-      { title: "Two Sum", difficulty: "Easy", link: "https://leetcode.com/problems/two-sum/", platform: "LC", solved: true },
-      { title: "Best Time to Buy Stock", difficulty: "Easy", link: "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/", platform: "LC", solved: true },
-    ]
-  },
-  {
-    day: 2,
-    theme: "Sliding Window",
-    problems: [
-      { title: "Maximum Subarray", difficulty: "Medium", link: "https://leetcode.com/problems/maximum-subarray/", platform: "LC", solved: true },
-      { title: "Longest Substring Without Repeating", difficulty: "Medium", link: "https://leetcode.com/problems/longest-substring-without-repeating-characters/", platform: "LC", solved: false },
-    ]
-  },
-  {
-    day: 3,
-    theme: "Binary Search",
-    problems: [
-      { title: "Binary Search", difficulty: "Easy", link: "https://leetcode.com/problems/binary-search/", platform: "LC", solved: false },
-      { title: "Search in Rotated Sorted Array", difficulty: "Medium", link: "https://leetcode.com/problems/search-in-rotated-sorted-array/", platform: "LC", solved: false },
-    ]
-  },
-  {
-    day: 4,
-    theme: "Linked Lists",
-    problems: [
-      { title: "Reverse Linked List", difficulty: "Easy", link: "https://leetcode.com/problems/reverse-linked-list/", platform: "LC", solved: false },
-      { title: "Merge Two Sorted Lists", difficulty: "Easy", link: "https://leetcode.com/problems/merge-two-sorted-lists/", platform: "LC", solved: false },
-    ]
-  },
-  {
-    day: 5,
-    theme: "Trees – Traversal",
-    problems: [
-      { title: "Inorder Traversal", difficulty: "Easy", link: "https://leetcode.com/problems/binary-tree-inorder-traversal/", platform: "LC", solved: false },
-      { title: "Max Depth of Binary Tree", difficulty: "Easy", link: "https://leetcode.com/problems/maximum-depth-of-binary-tree/", platform: "LC", solved: false },
-    ]
-  },
-  {
-    day: 6,
-    theme: "Graph Basics",
-    problems: [
-      { title: "Number of Islands", difficulty: "Medium", link: "https://leetcode.com/problems/number-of-islands/", platform: "LC", solved: false },
-      { title: "Clone Graph", difficulty: "Medium", link: "https://leetcode.com/problems/clone-graph/", platform: "LC", solved: false },
-    ]
-  },
-  {
-    day: 7,
-    theme: "Dynamic Programming",
-    problems: [
-      { title: "Climbing Stairs", difficulty: "Easy", link: "https://leetcode.com/problems/climbing-stairs/", platform: "LC", solved: false },
-      { title: "Coin Change", difficulty: "Medium", link: "https://leetcode.com/problems/coin-change/", platform: "LC", solved: false },
+      { title: "Two Sum",  link: "https://leetcode.com/problems/two-sum/", platform: "CF", solved: false },
+      { title: "Best Time to Buy Stock",  link: "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/", platform: "CF", solved: false },
     ]
   },
 ];
+  // {
+  //   day: 2,
+  //   theme: "Sliding Window",
+  //   problems: [
+  //     { title: "Maximum Subarray", difficulty: "Medium", link: "https://leetcode.com/problems/maximum-subarray/", platform: "LC", solved: true },
+  //     { title: "Longest Substring Without Repeating", difficulty: "Medium", link: "https://leetcode.com/problems/longest-substring-without-repeating-characters/", platform: "LC", solved: false },
+  //   ]
+  // },
+  // {
+  //   day: 3,
+  //   theme: "Binary Search",
+  //   problems: [
+  //     { title: "Binary Search", difficulty: "Easy", link: "https://leetcode.com/problems/binary-search/", platform: "LC", solved: false },
+  //     { title: "Search in Rotated Sorted Array", difficulty: "Medium", link: "https://leetcode.com/problems/search-in-rotated-sorted-array/", platform: "LC", solved: false },
+  //   ]
+  // },
+  // {
+  //   day: 4,
+  //   theme: "Linked Lists",
+  //   problems: [
+  //     { title: "Reverse Linked List", difficulty: "Easy", link: "https://leetcode.com/problems/reverse-linked-list/", platform: "LC", solved: false },
+  //     { title: "Merge Two Sorted Lists", difficulty: "Easy", link: "https://leetcode.com/problems/merge-two-sorted-lists/", platform: "LC", solved: false },
+  //   ]
+  // },
+  // {
+  //   day: 5,
+  //   theme: "Trees – Traversal",
+  //   problems: [
+  //     { title: "Inorder Traversal", difficulty: "Easy", link: "https://leetcode.com/problems/binary-tree-inorder-traversal/", platform: "LC", solved: false },
+  //     { title: "Max Depth of Binary Tree", difficulty: "Easy", link: "https://leetcode.com/problems/maximum-depth-of-binary-tree/", platform: "LC", solved: false },
+  //   ]
+  // },
+  // {
+  //   day: 6,
+  //   theme: "Graph Basics",
+  //   problems: [
+  //     { title: "Number of Islands", difficulty: "Medium", link: "https://leetcode.com/problems/number-of-islands/", platform: "LC", solved: false },
+  //     { title: "Clone Graph", difficulty: "Medium", link: "https://leetcode.com/problems/clone-graph/", platform: "LC", solved: false },
+  //   ]
+  // },
+  // {
+  //   day: 7,
+  //   theme: "Dynamic Programming",
+  //   problems: [
+  //     { title: "Climbing Stairs", difficulty: "Easy", link: "https://leetcode.com/problems/climbing-stairs/", platform: "LC", solved: false },
+  //     { title: "Coin Change", difficulty: "Medium", link: "https://leetcode.com/problems/coin-change/", platform: "LC", solved: false },
+  //   ]
+  // },
+
 
 // Castle build progress (problems solved out of goal)
 export const castleProgress = {

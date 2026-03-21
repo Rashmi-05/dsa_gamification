@@ -29,15 +29,20 @@ export default function ConnectPage({ user, onSuccess }) {
     if (!platform) { setError('Please select a platform'); return; }
     setError('');
     setLoading(true);
-
-    try {
-      await axios.post('/api/connect-platform', { platform, userId }).catch(() => {});
-    } catch (_) {}
+let data
+   try {
+  const response = await axios.post('http://localhost:5000/test2',{ platform, userId });
+  data = response.data
+  //return data;
+} catch (error) {
+  console.error('API call failed:', error.message);
+  //throw error; // rethrow if needed
+}
 
     // Use mock data
     await new Promise(r => setTimeout(r, 1200));
     setLoading(false);
-    const data = platform === 'leetcode' ? mockLeetCodeStats : mockCodeforcesStats;
+    //const data = platform === 'leetcode' ? mockLeetCodeStats : mockCodeforcesStats;
     onSuccess({ platform, userId, stats: data });
   };
 
