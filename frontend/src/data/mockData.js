@@ -33,14 +33,14 @@ export const mockCodeforcesStats = {
 };
 
 export const mockRoadmap = [
-  {
-    day: 1,
-    theme: "Day 1",
-    problems: [
-      { title: "Two Sum",  link: "https://leetcode.com/problems/two-sum/", platform: "CF", solved: false },
-      { title: "Best Time to Buy Stock",  link: "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/", platform: "CF", solved: false },
-    ]
-  },
+  // {
+  //   day: 1,
+  //   theme: "Day 1",
+  //   problems: [
+  //     { title: "Two Sum",  link: "https://leetcode.com/problems/two-sum/", platform: "CF", solved: false },
+  //     { title: "Best Time to Buy Stock",  link: "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/", platform: "CF", solved: false },
+  //   ]
+  // },
 ];
   // {
   //   day: 2,

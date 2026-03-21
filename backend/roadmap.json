@@ -1,0 +1,86 @@
+[
+  {
+    "day": 1,
+    "theme": "Day 1",
+    "problems": [
+      {
+        "title": "Erase and Extend (Easy Version)",
+        "link": "https://codeforces.com/problemset/problem/1537/E1",
+        "platform": "CF",
+        "solved": false
+      }
+    ]
+  },
+  {
+    "day": 2,
+    "theme": "Day 2",
+    "problems": [
+      {
+        "title": "2024-D",
+        "link": "https://codeforces.com/problemset/problem/2024/D",
+        "platform": "CF",
+        "solved": false
+      }
+    ]
+  },
+  {
+    "day": 3,
+    "theme": "Day 3",
+    "problems": [
+      {
+        "title": "Guess The Tree",
+        "link": "https://codeforces.com/problemset/problem/2001/C",
+        "platform": "CF",
+        "solved": false
+      }
+    ]
+  },
+  {
+    "day": 4,
+    "theme": "Day 4",
+    "problems": [
+      {
+        "title": "Genokraken",
+        "link": "https://codeforces.com/problemset/problem/2032/D",
+        "platform": "CF",
+        "solved": false
+      }
+    ]
+  },
+  {
+    "day": 5,
+    "theme": "Day 5",
+    "problems": [
+      {
+        "title": "Rating System",
+        "link": "https://codeforces.com/problemset/problem/1845/D",
+        "platform": "CF",
+        "solved": false
+      }
+    ]
+  },
+  {
+    "day": 6,
+    "theme": "Day 6",
+    "problems": [
+      {
+        "title": "Neo's Escape",
+        "link": "https://codeforces.com/problemset/problem/2108/C",
+        "platform": "CF",
+        "solved": false
+      }
+    ]
+  },
+  {
+    "day": 7,
+    "theme": "Day 7",
+    "problems": [
+      {
+        "title": "Permutation of Rows and Columns",
+        "link": "https://codeforces.com/problemset/problem/1980/E",
+        "platform": "CF",
+        "solved": false
+      }
+    ]
+  }
+]

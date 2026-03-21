@@ -6,12 +6,13 @@ def build_ltr_df(pidf, user_output):
     tag_counts = user_output["tagCount"]
 
     # find all problem tag columns
-    tag_cols = pidf[7:].columns
-
+    tag_cols = pidf.columns
+    tag_cols = tag_cols[7:]
+    #print(tag_cols)
     user_features = {"currentRating": rating}
 
     for col in tag_cols:
-        tag = col[:-2]  # remove _x
+        tag = col  # remove _x
         user_features[f"{tag}_y"] = tag_counts.get(tag, 0)
 
     user_df = pd.DataFrame([user_features])

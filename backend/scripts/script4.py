@@ -11,10 +11,10 @@ def rank_problems(ltr_df, top_k=20):
 
     # keep identifiers separately
     ids = ltr_df[["contestId", "index"]]
-
-    # drop non-feature columns
-    feature_df = ltr_df.drop(columns=["contestId", "index", "name", "type", "userRatingAtSolve"])
-
+    
+    #drop non-feature columns
+    feature_df = ltr_df.drop(columns=["contestId", "index", "name", "type", "userRatingAtSolve","communication_y","2-sat_y"])
+    #print(feature_df.columns)
     # predict scores
     scores = model.predict(feature_df)
 
@@ -26,4 +26,4 @@ def rank_problems(ltr_df, top_k=20):
     result = result.sort_values("score", ascending=False)
 
     # return top problems
-    return result.head(top_k)
+    return result.head(top_k).to_string(index=False)

@@ -1,4 +1,7 @@
 import { spawn } from "child_process";
+import fs from "fs";
+import { parseCFOutput } from "../utils/parseOutput.js";
+import generateRoadmap from "../utils/generateRoadMap.js";
 
 export const handleTest3 = async (req, res) => {
   try {
@@ -20,13 +23,21 @@ export const handleTest3 = async (req, res) => {
       console.error("Python error:", data.toString());
     });
 
-    python.on("close", () => {
+    python.on("close", async () => {
       
          try {
-    
+    console.log(output.trim())
+    const op = parseCFOutput(output.trim())
+    console.log(process.cwd());
+    fs.writeFileSync(
+    "problems.json",
+    JSON.stringify(op, null, 2),
+    "utf-8"
+    );
+    await generateRoadmap(req.body.numDays,req.body.numProblems);
     return res.json(output.trim());
   } catch (e) {
-    console.log("RAW OUTPUT:", output);
+    console.log(e);
     return res.json({ raw: output });
   }
     });

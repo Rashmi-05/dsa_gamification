@@ -78,7 +78,7 @@ try:
     rel =build_ltr_df(pidf,user_output)
     #print(rel.columns)
 
-    aabha = rank_problems(rel)
+    aabha =rank_problems(rel)
     print(aabha)
 except Exception as e:
     print(json.dumps({"error": str(e)}))

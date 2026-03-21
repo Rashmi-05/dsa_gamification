@@ -1,7 +1,7 @@
 import React, { useState,useEffect } from 'react';
 import CastleMap from '../components/CastleMap.jsx';
 import GoalModal from '../components/GoalModal.jsx';
-import { mockRoadmap } from '../data/mockData.js';
+//import { mockRoadmap } from '../data/mockData.js';
 
 const difficultyColor = {
   Easy: '#39ff8a',
@@ -39,7 +39,7 @@ const CASTLE_W = 420;
 export default function DashboardPage({ user, platformData, goalData, onGoalSet }) {
   // Auto-show goal modal if no goal set yet
   const [showGoalModal, setShowGoalModal] = useState(!goalData);
-  const [roadmap, setRoadmap] = useState(mockRoadmap);
+  const [roadmap, setRoadmap] = useState([]);
   const [activeDay, setActiveDay] = useState(0);
   
   const stats = platformData?.stats;
@@ -63,8 +63,16 @@ export default function DashboardPage({ user, platformData, goalData, onGoalSet 
     console.log(platformData.stats.rating)
   };
 useEffect(() => {
-    console.log("Here")
-  },[]);
+  if (!showGoalModal) {
+    // call your API here
+    fetch("http://localhost:5000/test4")
+      .then(res => res.json())
+      .then(data => {
+       // console.log("Roadmap:", data);
+        setRoadmap(data) 
+      });
+  }
+}, [showGoalModal]);
   const handleGoalSet = (data) => {
     onGoalSet(data);
     setShowGoalModal(false);
