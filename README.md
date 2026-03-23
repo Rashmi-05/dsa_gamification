@@ -1,2 +1,5 @@
-# dsa_gamification
-Gamification of dsa to make it intereseting.
+# CodeQuest
+A gamified, personalized, and engaging system that helps users stay consistent, improve efficiency, and achieve their coding goals.
+
+Submission by CodeQuest to PVG Ignite Hackverse Hackathon - 2026
+
