@@ -49,6 +49,31 @@ export default function DashboardPage({ user, platformData, goalData, onGoalSet 
   const totalProblems = roadmap.reduce((acc, day) => acc + day.problems.length, 0);
   const castlePct = totalSolved / totalProblems;
 
+  async function refreshSolvedStatus() {
+  try {
+    const currentRoadmap = [...roadmap];
+
+    const res = await fetch("http://localhost:5000/refresh", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        handle: "gargs_21",
+        roadmap: currentRoadmap,
+      }),
+    });
+
+    const updatedRoadmap = await res.json();
+    console.log(updatedRoadmap);
+
+    setRoadmap(updatedRoadmap);
+
+  } catch (err) {
+    console.error("Refresh failed", err);
+  }
+}
+
   const toggleSolved = (dayIdx, probIdx) => {
     setRoadmap(prev =>
       prev.map((d, di) =>
@@ -221,11 +246,18 @@ useEffect(() => {
           {/* Roadmap */}
           <div style={styles.card}>
             <div style={styles.cardHeader}>
-              <div style={styles.cardTitle}>📅 Quest Roadmap</div>
-              <button style={styles.goalBtn} onClick={() => setShowGoalModal(true)}>
-                ⚑ {goalData ? 'Change Goal' : 'Set a Goal'}
-              </button>
-            </div>
+                <div style={styles.cardTitle}>📅 Quest Roadmap</div>
+
+                    <div style={{ display: "flex", gap: "10px" }}>
+                      <button style={styles.goalBtn} onClick={refreshSolvedStatus}>
+                                    🔄 Refresh
+                       </button>
+
+                      <button style={styles.goalBtn} onClick={() => setShowGoalModal(true)}>
+                              ⚑ {goalData ? "Change Goal" : "Set a Goal"}
+                        </button>
+                    </div>
+                </div>
 
             {goalData && (
               <div style={styles.goalSummary}>
