@@ -4,6 +4,12 @@
     "theme": "Day 1",
     "problems": [
       {
+        "title": "2024-D",
+        "link": "https://codeforces.com/problemset/problem/2024/D",
+        "platform": "CF",
+        "solved": false
+      },
+      {
         "title": "Erase and Extend (Easy Version)",
         "link": "https://codeforces.com/problemset/problem/1537/E1",
         "platform": "CF",
@@ -16,8 +22,14 @@
     "theme": "Day 2",
     "problems": [
       {
-        "title": "2024-D",
-        "link": "https://codeforces.com/problemset/problem/2024/D",
+        "title": "Penchick and Desert Rabbit",
+        "link": "https://codeforces.com/problemset/problem/2031/D",
+        "platform": "CF",
+        "solved": false
+      },
+      {
+        "title": "Control of Randomness",
+        "link": "https://codeforces.com/problemset/problem/2040/E",
         "platform": "CF",
         "solved": false
       }
@@ -32,6 +44,12 @@
         "link": "https://codeforces.com/problemset/problem/2001/C",
         "platform": "CF",
         "solved": false
+      },
+      {
+        "title": "Rating System",
+        "link": "https://codeforces.com/problemset/problem/1845/D",
+        "platform": "CF",
+        "solved": false
       }
     ]
   },
@@ -39,6 +57,12 @@
     "day": 4,
     "theme": "Day 4",
     "problems": [
+      {
+        "title": "Rae Taylor and Trees (hard version)",
+        "link": "https://codeforces.com/problemset/problem/2171/F",
+        "platform": "CF",
+        "solved": false
+      },
       {
         "title": "Genokraken",
         "link": "https://codeforces.com/problemset/problem/2032/D",
@@ -52,8 +76,14 @@
     "theme": "Day 5",
     "problems": [
       {
-        "title": "Rating System",
-        "link": "https://codeforces.com/problemset/problem/1845/D",
+        "title": "Permutation of Rows and Columns",
+        "link": "https://codeforces.com/problemset/problem/1980/E",
+        "platform": "CF",
+        "solved": false
+      },
+      {
+        "title": "Minimal Segment Cover",
+        "link": "https://codeforces.com/problemset/problem/1175/E",
         "platform": "CF",
         "solved": false
       }
@@ -64,8 +94,14 @@
     "theme": "Day 6",
     "problems": [
       {
-        "title": "Neo's Escape",
-        "link": "https://codeforces.com/problemset/problem/2108/C",
+        "title": "Tree Orientation (Easy Version)",
+        "link": "https://codeforces.com/problemset/problem/2208/D1",
+        "platform": "CF",
+        "solved": false
+      },
+      {
+        "title": "Chain Reaction",
+        "link": "https://codeforces.com/problemset/problem/1954/E",
         "platform": "CF",
         "solved": false
       }
@@ -76,8 +112,14 @@
     "theme": "Day 7",
     "problems": [
       {
-        "title": "Permutation of Rows and Columns",
-        "link": "https://codeforces.com/problemset/problem/1980/E",
+        "title": "Trapmigiano Reggiano",
+        "link": "https://codeforces.com/problemset/problem/2071/C",
+        "platform": "CF",
+        "solved": false
+      },
+      {
+        "title": "Cow and Fields",
+        "link": "https://codeforces.com/problemset/problem/1307/D",
         "platform": "CF",
         "solved": false
       }
